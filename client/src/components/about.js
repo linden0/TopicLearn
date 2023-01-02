@@ -45,7 +45,7 @@ function About() {
                 
                 {(width > 900) ? (
                     <div className="intro-right">
-                        <img src={require("./18915856.jpg")} alt="smart-guy" height="90%">
+                        <img src={require("./img/idea-guy.jpg")} alt="smart-guy" height="90%">
                         </img>
                     </div>
                 ) : (
@@ -55,12 +55,12 @@ function About() {
             <div className="blue">
                 <div className="card-container">
                     <div className="card">
-                        <img src={require("./brain.png")} width="50%"></img>
+                        <img src={require("./img/brain.png")} width="50%"></img>
                         <h2>Discover something new</h2>
                         <p>Find a new interest, from psychology (the paradox of choice), to criminology (unsolved cases), to computer science (GANs). The benefits are endless: a sharp mind, finding a potential passion, a broadened perspective. </p>
                     </div>
                     <div className="card">
-                        <img src={require("./write.png")} width="50%"></img>
+                        <img src={require("./img/write.png")} width="50%"></img>
                         <h2>Discover something new</h2>
                         <p>Find a new interest, from psychology (the paradox of choice), to criminology (unsolved cases), to computer science (GANs). The benefits are endless: a sharp mind, finding a potential passion, a broadened perspective. </p>
                     </div>
