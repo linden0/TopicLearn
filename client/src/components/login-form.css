@@ -1,0 +1,86 @@
+
+
+.wrapper {
+    background-color: rgb(241, 241, 241);
+    height: calc(100vh - 60px);
+    width: 100%;
+}
+
+.login-wrapper {
+    text-align: center;
+    padding-top: 50px;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.lg-height {
+    height: 65%;
+}
+
+.login-wrapper form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    height: 315px;
+}   
+
+.register form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    height: 315px;
+}  
+
+.left {
+    text-align: start;
+}
+
+.login-wrapper form p::after{
+    content: " *";
+    color: red;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.medium-height {
+    /* height: 35px; */
+    padding:none;
+}
+
+.styled-input {
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(227, 233, 238);
+    padding: 10px 15px;
+    font-size: 17px;
+}
+
+.red {
+    background-color: rgb(235, 186, 186);
+    color: rgb(105, 24, 24);
+}
+
+.blue-link {
+    text-decoration: none;
+    color:teal;
+}
+
+.large-form {
+    height: 450px !important;
+}
