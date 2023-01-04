@@ -24,7 +24,7 @@ Router.post("/register", async function (req, res) {
   let db_connect = dbo.getDb();
   let Users = db_connect.collection("users");
   let user = req.body;
-  user = {...user, liked:[], topics:[]}
+  user = {...user, liked:[]}
   const takenEmail = await Users.findOne({email: user.email});
 
   if (takenEmail) {
