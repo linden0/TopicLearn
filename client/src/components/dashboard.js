@@ -6,9 +6,9 @@ function Dashboard() {
     const navigate = useNavigate();
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [posts, setPosts] = useState([]);
-    const [selectedTopics, setSelectedTopics] = useState([])
-    const [image, setImage] = useState(null)
-    const [error, setError] = useState('')
+    const [image, setImage] = useState(null);
+    const [error, setError] = useState('');
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
     function handlePost(e) {
         e.preventDefault();
         console.log(image.size)
@@ -27,7 +27,6 @@ function Dashboard() {
         fetch("/createPost", {
             method: "POST",
             headers: {
-                // 'content-type': 'multipart/form-data',
                 "x-access-token": localStorage.getItem("token")
             },
             body: formData
@@ -43,6 +42,13 @@ function Dashboard() {
     }
 
     useEffect(() => {
+        fetch("/isUserAuthenticated", {
+            headers: {
+                "x-access-token": localStorage.getItem("token")
+            }    
+        })
+        .then(res => res.json())
+        .then(data => setIsAuthenticated(data.isAuthenticated)) 
         // fetch("/getUserPosts")
         // .then(res => res.json())
         // .then(data => setPosts(data.posts))
@@ -53,44 +59,46 @@ function Dashboard() {
     }
     
     return (
-        <div className="center wrapper">
-            <div className="right">
-                <button className="button-filled" onClick={toggleModal}>Create Post</button>
-            </div>
-            {posts.length > 0 ? (
-                <h1>Your Posts</h1>
-            ) : (
-                <h1>No Posts Yet</h1>
-            )}
+            <div>
+                {isAuthenticated ? (
+                <div className="center wrapper">
+                    <div className="right">
+                        <button className="button-filled" onClick={toggleModal}>Create Post</button>
+                    </div>
+                    {posts.length > 0 ? (
+                        <h1>Your Posts</h1>
+                    ) : (
+                        <h1>No Posts Yet</h1>
+                    )}
 
-            {modalIsOpen && (
-                <div className="modal">
-                    <form onSubmit={handlePost} enctype="multipart/formdata">
-                        <span className="close-button" onClick={toggleModal}>&times;</span>
-                        {error && <p>{error}</p>}
-                        <div>
-                            <p className="left">Title</p>
-                            <input type="text" className="full-width medium-height styled-input" required={true}></input>
+                    {modalIsOpen && (
+                        <div className="modal">
+                            <form onSubmit={handlePost} enctype="multipart/formdata">
+                                <span className="close-button" onClick={toggleModal}>&times;</span>
+                                {error && <p>{error}</p>}
+                                <div>
+                                    <p className="left">Title</p>
+                                    <input type="text" className="full-width medium-height styled-input" required={true}></input>
+                                </div>
+                                <div>
+                                    <p className="left">Content</p>
+                                    <textarea className="full-width styled-input long" required={true}></textarea>
+                                </div>
+                                <div>
+                                    <p className="left">Picture graphic (optional)</p>
+                                    <input type="file" className="full-width medium-height larger-upload left" accept="image/*" onChange={handleImageChange}></input>
+                                </div>
+                                <div>
+                                    <input type="submit" className="full-width button-filled" value="Submit" />
+                                </div>
+                
+                            </form>
                         </div>
-                        <div>
-                            <p className="left">Content</p>
-                            <textarea className="full-width styled-input long" required={true}></textarea>
-                        </div>
-                        <div>
-                            <p className="left">Picture graphic (optional)</p>
-                            <input type="file" className="full-width medium-height larger-upload left" accept="image/*" onChange={handleImageChange}></input>
-                        </div>
-                        <div>
-                            <input type="submit" className="full-width button-filled" value="Submit" />
-                        </div>
-          
-                    </form>
+                    )}
                 </div>
-            )}
-
-
-        </div>
-
+                ) : (<></>)}
+            </div>
+    
         
         )
 
