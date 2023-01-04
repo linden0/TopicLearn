@@ -74,10 +74,12 @@ function Dashboard() {
                     {modalIsOpen && (
                         <div className="modal">
                             <form onSubmit={handlePost} enctype="multipart/formdata">
-                                <span className="close-button" onClick={toggleModal}>&times;</span>
                                 {error && <p>{error}</p>}
                                 <div>
-                                    <p className="left">Title</p>
+                                    <div className="close-container">
+                                        <div className="sit-bottom"><p className="left">Title</p></div>
+                                        <span className="close-button" onClick={toggleModal}>&times;</span>
+                                    </div>
                                     <input type="text" className="full-width medium-height styled-input" required={true}></input>
                                 </div>
                                 <div>

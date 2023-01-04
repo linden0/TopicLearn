@@ -18,10 +18,13 @@
     margin-left: 35%;
     margin-top: 10%;
     width: 30%;
-    height: 450px;
+    height: 525px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
 }
 .long {
@@ -31,12 +34,20 @@
     padding: 10px 15px;
     font-size: 17px;
 }
+.close-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sit-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
 
 .close-button {
     cursor: pointer;
-    position: absolute;
-    top: 14%;
-    left: 62%;
     font-size: 40px;
     font-weight: 500;
 }
