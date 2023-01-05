@@ -1,5 +1,3 @@
-
-
 .navigation {
     height: 60px;
     width: 100%;
@@ -13,30 +11,31 @@
 }
 
 .brand-name {
+    display: flex;
+    flex-direction: row;
     text-decoration: none;
-    color: black;
     font-size: 1.3rem;
-    margin-left: 1rem;
+    margin-left: 10%;
   }
+
 .navigation-menu {
-    margin-left: auto;
     display: flex;
     justify-content: space-between;
-    padding-left:0px;
+    padding-left:1rem;
     padding-right:10px;
     width: 100%;
     z-index: 1;
-
 }
+
 .navigation-menu ul {
     display: flex;
     padding: 0;
     align-items: center;
 }
+
 .navigation-menu li {
     list-style-type: none;
     margin: 0 1rem;
-
 }
 
 .links {
@@ -44,13 +43,6 @@
   display: block;
   width: 100%;
   color:black;
-}
-
-.navigation-menu li links {
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    /* color:rgb(61, 60, 60); */
 }
 
 .hamburger {
@@ -74,19 +66,14 @@
     background-color: #2642af;
 }
 
-.white-bg {
-  background-color: white !important;
-}
-.white-font {
-  color: white !important;
-}
 @media screen and (max-width: 768px) {
   .hamburger {
     display: block;
   }
-  .navigation-menu ul {
+  .navigation-menu ul{
     display: none;
   }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -98,7 +85,6 @@
     width: 100%;
     height: calc(100vh - 77px);
     background-color: white;
-    border-top: 1px solid black;
     justify-content: start;
     z-index: -1;
   }
@@ -114,18 +100,20 @@
   .navigation-menu li:hover {
     background-color: #eee;
   }
+  .navigation-menu ul {
+    display: none;
+  }
+
+  .navigation-menu.expanded {
+    z-index: 0;
+  }
+  .navigation-menu.expanded ul {
+    display: block;
+  }
 }
-@media screen and (max-width: 768px) {
-    .navigation-menu ul {
-      /* previous styles */
-      dipslay: none;
-    }
-}
-@media screen and (max-width: 768px) {
-    .navigation-menu.expanded {
-      z-index: 0;
-    }
-    .navigation-menu.expanded ul {
-      display: block;
-    }
+
+@media screen and (max-width: 330px){
+  .brand-name {
+    display: none;
+  }
 }

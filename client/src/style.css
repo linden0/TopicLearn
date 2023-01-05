@@ -26,7 +26,7 @@ body {
 }
 
 .button-filled {
-    background-color: #137adb;
+    background-color: #4f95d0;
     border: none;
     color: white;
     padding: 10px;
@@ -37,5 +37,21 @@ body {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 4px;
+}
+
+.blue-font {
+    color: #4f95d0;
+}
+
+.white-font {
+    color: white !important;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.white-bg {
+    background-color: white !important;
 }
 
