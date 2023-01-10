@@ -1,12 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Roboto&display=swap');
 
 
-.header {
-    font-family: 'Comfortaa', cursive;
-    font-weight: 900;
-    font-size: 50px;
+.lg-title {
+    font-family: 'Inter Tight', cursive;
+    font-weight: 600;
+    font-size: 57px;
+}
+.gray-font {
+    color: gray;
+}
+.space-line {
+    line-height: 35px;
+
 }
 
+.card-images {
+    font-size: 100px;
+}
 .intro-left {
     vertical-align:middle;
     float:left;
@@ -35,10 +44,11 @@
     margin-top:calc((100vh - 60px) / 4);
 }
 
-.medium {
-    width:150px;
+.medium-btn {
+    width: 150px;
+    height: 50px; 
 }
-.blue {
+.blue-container {
     background-color: #4f95d0;
     clear: both;
     padding-top: 50px;
@@ -52,18 +62,38 @@
 .card {
     /* background-color: white; */
     color: white;
-    width: 30%;
+    width: 25%;
     text-align: center;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
     .intro-right {
         display: none;
     }
     .intro-left {
         width: 100%;
         padding-left: 0;
-        margin-left: 10%;
-        margin-right: 10%
+
+    }
+    .action-container {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+}
+
+@media screen and (max-width: 920px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 310px) {
+    .card-images {
+        display: none;
     }
 }

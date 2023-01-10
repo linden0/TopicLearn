@@ -35,7 +35,7 @@ function SignUpForm() {
             setError("Password must be at least 6 characters")
         } else {
 
-            fetch("/register", {
+            fetch("http://localhost:5000/register", {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"
@@ -57,7 +57,7 @@ function SignUpForm() {
     }
 
     useEffect(() => {
-        fetch("/isUserAuthenticated", {
+        fetch("http://localhost:5000/isUserAuthenticated", {
             headers: {
                 "x-access-token": localStorage.getItem("token")
             }    
@@ -67,16 +67,6 @@ function SignUpForm() {
     }, []);
 
     return (
-        // <div>
-        //     <form onSubmit={event => handleRegister(event)}>
-        //         {error && <p>{error}</p>}
-        //         <input type="text" required={true} placeholder="First Name"/>
-        //         <input type="text" required={true} placeholder="Last Name"/>
-        //         <input type="email" required={true}  placeholder="Email" />
-        //         <input type="password" required={true}  placeholder="Password"/>
-        //         <input type="submit" value="Register"></input>
-        //     </form>
-        // </div>
 
         <div className="wrapper">
             <div className="login-wrapper lg-height">

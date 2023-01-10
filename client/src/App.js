@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import axios from 'axios'; 
  
 // We import all the components we need in our app
 import Navbar from "./components/navbar";

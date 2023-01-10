@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500&display=swap');
 body {
     font-size: 19px;
-    font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -11,7 +10,7 @@ body {
 }
 
 body {
-    font-family: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
       "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
       sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -26,6 +25,7 @@ body {
 }
 
 .button-filled {
+    font-family: 'Inter Tight', sans-serif;
     background-color: #4f95d0;
     border: none;
     color: white;

@@ -24,7 +24,7 @@ function Dashboard() {
         formData.append('image', image)
         console.log(formData)
 
-        fetch("/createPost", {
+        fetch("http://localhost:5000/createPost", {
             method: "POST",
             headers: {
                 "x-access-token": localStorage.getItem("token")
@@ -42,7 +42,7 @@ function Dashboard() {
     }
 
     useEffect(() => {
-        fetch("/isUserAuthenticated", {
+        fetch("http://localhost:5000/isUserAuthenticated", {
             headers: {
                 "x-access-token": localStorage.getItem("token")
             }    

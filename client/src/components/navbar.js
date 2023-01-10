@@ -15,7 +15,7 @@ function Navbar() {
     }
 
     useEffect(() => {
-        fetch("/isUserAuthenticated", {
+        fetch("http://localhost:5000/isUserAuthenticated", {
             headers: {
                 "x-access-token": localStorage.getItem("token")
             }    

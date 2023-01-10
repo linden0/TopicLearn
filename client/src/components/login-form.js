@@ -14,7 +14,7 @@ function LoginForm() {
             password: form[1].value
         }
 
-        fetch("/login", {
+        fetch("http://localhost:5000/login", {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
@@ -34,7 +34,7 @@ function LoginForm() {
     }
 
     useEffect(() => {
-        fetch("/isUserAuthenticated", {
+        fetch("http://localhost:5000/isUserAuthenticated", {
             headers: {
                 "x-access-token": localStorage.getItem("token")
             }    
