@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from "react";
 import { useNavigate, Link } from "react-router-dom"
-import "./login-form.css"
+import "./auth-form.css"
 
 function LoginForm() {
     const navigate = useNavigate();
@@ -47,20 +47,20 @@ function LoginForm() {
  
         return (
             <div className="wrapper">
-                <div className="login-wrapper">
+                <div className="form-wrapper">
                     <h2>Log in to your account</h2>
                     <p>Don't have an account? <Link to="/register" className="blue-link">Sign Up</Link></p>
                     <form onSubmit={event => handleLogin(event)}>
-                        {error && <input disabled={true} value={error} className="full-width medium-height styled-input red"/>}
+                        {error && <input disabled={true} value={error} className="full-width styled-input red"/>}
                         <div>
                             <p className="left" >Email</p>
-                            <input type="email" required={true} className="full-width medium-height styled-input"/>
+                            <input type="email" required={true} className="full-width styled-input"/>
                         </div>
                         <div>
                             <p className="left" >Password</p>
-                            <input type="password" required={true} className="full-width medium-height styled-input"/>
+                            <input type="password" required={true} className="full-width styled-input"/>
                         </div>
-                        <input type="submit" value="Submit" className="button-filled full-width medium-height"/>
+                        <input type="submit" value="Submit" className="button-filled full-width"/>
 
                     </form>
                 </div>

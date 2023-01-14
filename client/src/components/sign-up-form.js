@@ -1,6 +1,6 @@
 import  { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom"
-import "./login-form.css"
+import "./auth-form.css"
 function SignUpForm() {
     const navigate = useNavigate();
     const [error, setError] = useState('');
@@ -69,7 +69,7 @@ function SignUpForm() {
     return (
 
         <div className="wrapper">
-            <div className="login-wrapper lg-height">
+            <div className="form-wrapper lg-height">
                 <h2>Create an account</h2>
                 <form className="large-form" onSubmit={event => handleRegister(event)}>
                     {error && <input disabled={true} value={error} className="full-width medium-height styled-input red"/>}

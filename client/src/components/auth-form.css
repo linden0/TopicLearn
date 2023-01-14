@@ -1,12 +1,10 @@
-
-
 .wrapper {
     background-color: rgb(241, 241, 241);
     height: calc(100vh - 60px);
     width: 100%;
 }
 
-.login-wrapper {
+.form-wrapper {
     text-align: center;
     padding-top: 50px;
     height: 55%;
@@ -19,11 +17,11 @@
     height: 65%;
 }
 
-.login-wrapper form {
+.form-wrapper form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width:30%;
+    width:480px;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
@@ -31,19 +29,6 @@
     padding: 20px;
     height: 315px;
 }   
-
-.register form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width:30%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    height: 315px;
-}  
 
 .left {
     text-align: start;
@@ -56,11 +41,6 @@
 
 .full-width {
     width: 100%;
-}
-
-.medium-height {
-    /* height: 35px; */
-    padding:none;
 }
 
 .styled-input {
@@ -83,4 +63,27 @@
 
 .large-form {
     height: 450px !important;
+}
+
+
+@media screen and (max-width: 510px) {
+    .form-wrapper form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .form-wrapper form {
+        padding: 0px;
+        background-color: rgb(241, 241, 241);
+        
+    }
+    .styled-input {
+        border: 1px solid rgb(2, 0, 105);
+    }
+    .button-filled {
+        width: 90%;
+        margin-left: auto !important    ;
+        margin-right: auto !important;
+    }
 }
